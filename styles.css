@@ -1,5 +1,8 @@
+
+
 * {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 
@@ -7,9 +10,7 @@
 
 body {
     background-color: rgba(255, 217, 0, 0.993);
-    width: 100%;
 
-    
 }
 
 p{
@@ -19,13 +20,16 @@ p{
 
 #container {
     background-color: white;
-    width: 80%;
+    width: 100%;
     margin: auto;
+    display: flex; flex-direction: column;
 }
 
 header {
     background-color: rgb(106, 177, 235);
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 h2 {
@@ -35,13 +39,13 @@ h2 {
     width: 100%;
 }
 
-.figure {
+figure {
     width: 100%;
-    height: 40%;
 }
 
 .simpsonsHero{
     width: 100%;
+    border-bottom: 2px solid white;
 }
 
 nav{
@@ -50,39 +54,48 @@ nav{
     text-align: center;
     width: 100%; 
     padding: 1%;
+    display: flex;
+    height: auto;
 }
 ul {
     list-style-type: none;
     width: 100%;
-    display: flex;
-    justify-content: space-around;
+    justify-content: space-around; text-align: center;
   }
+  
+
 nav>ul>li>a{ 
+    display: block;
+    padding: 1em;
     color:white;
+    text-align: center;
+   
 }
 
 main {
     background-color: white;
     width: 100%;
- 
     align-items: flex-end;
+
 }
 
 .main-content {
     width: 100%;
     background-color: white;
-    display: flex;
+    display: flex; flex-direction: column;
  
 }
 
 article {
     background-color: white;
-    width: 70%;
+    width: 100%;
+    padding: 1em;
 }
 
 h1{ 
     color: rgba(212, 193, 21, 0.842);
     padding: 2%;
+    text-align: center;
     
 }
 
@@ -90,34 +103,36 @@ h1{
     color: black;
     padding: 1%;
     text-align: justify;
+    width: 100%;
  }
 
  .figure-main{
     object-fit: contain;
-    display: flex;
+    display: flex; flex-direction: column;
     height: 50%;
     justify-content: space-evenly;
+    width: 100%;
  }
 
 .simpsonsImg1{
-    width: 33%;
+    width: 100%;
     border: 1px solid; color: black;
 }
 
 .simpsonsImg2{
-    width: 33%;
+    width: 100%;
     padding: 1%;
     border: 1px solid; color: black;
 }
 
 .simpsonsImg3{
-    width: 33%;
+    width: 100%;
     padding: 1%;
     border: 1px solid; color: black;
 }
 
 aside{
-    width: 30%;
+    width: 100%;
     background-color:  rgb(106, 177, 235);
     text-align: center;
     padding: 1%;
@@ -141,7 +156,8 @@ h3{
 span{
     color: white;
     font-weight: 500;
-    font-style: italic;S
+    font-style: italic;
+    padding: 2em;
 }
 
 p{
@@ -157,4 +173,23 @@ footer{
     font-size: 16px;
     text-align: center;
     padding: 1%;
+    flex-direction: column;
 }
+
+/*
+@media screen and (max-width: 640px) {
+   
+   - AUGMENTER LA LARGEUR DU CONTAINER AU MAXIMUM
+   - AUGMNETER AU MAXIMUM LA LARGEUR DU HEADER, DU MAIN ET DU FOOTER
+   - VU QUE LES ENFANTS SONT EN %, ILS DEVRAIENT S'ADAPTER SELON LES VALEURS MODIFIEES
+   - AJOUTER FLEX-DIRECTION DANS FIGURE MAIN CLASS PUIS COLUMN
+   - AJOUTER DISPLAY FLEX DIRECTION COLUMN
+   - AJOUTER LA FONCTION "FLEX DIRECTION COLUMN" DANS LA PARTIE "MAIN-CONTENT"
+   - AJUSTER LA LARGEUR DE L'ASIDE A 100%
+   - AJOUTER LA FONCTION "FLEX DIRECTION : COLUMN" DANS LA PARTIE UL DU NAV 
+   - DECALER L'ASIDE EN-DESSOUS DU "p" DE L'ARTICLE AVEC UNE FONCTYION flex
+   - AJOUTER ALIGN-ITEMS A H1 ET P1
+   - AJOUTER UN DISPLAY FLEX DANS MAIN
+   - 
+  }
+*/
